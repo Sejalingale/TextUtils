@@ -49,7 +49,7 @@ const handleExtraSpaces = () => {
 </div>
 <div className="container my-3"  style={{color:props.mode==="dark"?"white":"#042743"}}>
   <h2>Your Text Summary</h2>
-  <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} word and {text.length} chracters</p>
+  <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} word and {text.length} chracters</p>
   <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes to read the text</p>
   <h2>Text Preview</h2>
   <p>{text.length>0?text:"Enter the text to preview it here"}</p>
